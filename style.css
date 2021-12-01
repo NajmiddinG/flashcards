@@ -1,0 +1,123 @@
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Estonia&family=Open+Sans&family=Pacifico&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background: whitesmoke;
+    }
+    
+    .header {
+        background-color: white;
+        padding: 14px;
+    }
+    
+    .container {
+        width: 92%;
+        margin: auto;
+    }
+    
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #name {
+        font-weight: 600;
+    }
+    
+    .texts {
+        font-family: 'Estonia', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Pacifico', cursive;
+    }
+    
+    .nav_right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    #show_add_box,
+    #delete_dards {
+        outline: none;
+        border: 1px solid red;
+        width: 4.7rem;
+        height: 2.2rem;
+        border-radius: 5px;
+    }
+    
+    .add_card {
+        margin: 10px auto 10px;
+        width: 330px;
+        height: 200px;
+        padding: 20px;
+        border-radius: 1px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.9);
+    }
+    
+    .add_card h2 {
+        text-align: center;
+    }
+    
+    .add_card label {
+        font-size: 15px;
+    }
+    
+    textarea {
+        height: 2.3rem;
+        width: 100%;
+        max-width: 100%;
+        max-height: 26%;
+        border: 1px solid #00000033;
+        border-radius: 3px;
+    }
+    
+    #save_button,
+    #close_button {
+        border: 1px solid #00000033;
+        border-radius: 5px;
+        padding: 8px;
+        background-color: whitesmoke;
+    }
+    
+    .items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    .item {
+        width: 370px;
+        height: 200px;
+        word-wrap: break-word;
+        margin: 10px;
+        padding-top: 28px;
+        background: #fff;
+        cursor: pointer;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+    }
+    
+    hr {
+        background-color: red;
+        border: none;
+        height: 1px;
+    }
+    
+    .question_card {
+        padding: 20px;
+    }
+    
+    .answer_card {
+        display: none;
+        justify-content: center;
+        color: red;
+    }

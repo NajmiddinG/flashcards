@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="shortcut icon" href="flashcard.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <div class="container">
+                <h1 id="name">Flashcards</h1>
+                <div class="nav_right">
+                    <button id="show_add_box" onclick="add_card()">Add Card</button>
+                    <button id="delete_dards" onclick="delete_cards()">Del Cards</button>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="add_card">
+                    <h2>Create Flashcard</h2>
+                    <label for="question">Question</label>
+                    <br>
+                    <textarea id="question"></textarea>
+                    <br>
+                    <label for="answer">Answer</label>
+                    <br>
+                    <textarea id="answer"></textarea>
+                    <br>
+                    <button id="save_button" onclick="save_button()">Save</button> <button id="close_button" onclick="remove_card()">Close</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="items">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
