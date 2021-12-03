@@ -23,7 +23,6 @@ flashcardMaker = (text) => {
 
     let createItem = document.createElement("div");
     createItem.classList = "item";
-    console.log(question, answer);
     createItem.setAttribute('onclick', 'answerFun(this)');
     createItem.innerHTML = `<hr>
     <p class="question_card">${text.question}</p>
