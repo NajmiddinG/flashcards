@@ -1,7 +1,9 @@
-var contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
-
-console.log(contentArray);
-
+var contentArray;
+if (localStorage.getItem('questions')) {
+    contentArray = JSON.parse(localStorage.getItem('questions'));
+} else {
+    contentArray = []
+}
 
 function add_card() {
     let a = document.getElementsByClassName("add_card")[0];
@@ -21,25 +23,19 @@ flashcardMaker = (text) => {
 
     let createItem = document.createElement("div");
     createItem.classList = "item";
+    console.log(question, answer);
     createItem.setAttribute('onclick', 'answerFun(this)');
     createItem.innerHTML = `<hr>
     <p class="question_card">${text.question}</p>
     <p class="answer_card">${text.answer}</p>`;
     document.getElementsByClassName("items")[0].appendChild(createItem);
 }
-contentArray.array.forEach(element => {
-    flashcardMaker
-});
+contentArray.forEach(flashcardMaker);
 
 function save_button() {
     let question = document.getElementById("question").value;
     let answer = document.getElementById("answer").value;
 
-
-    let flashcard_info = {
-        'question': question,
-        'answer': answer
-    }
     let createItem = document.createElement("div");
     createItem.classList = "item";
     createItem.setAttribute('onclick', 'answerFun(this)');
@@ -47,13 +43,12 @@ function save_button() {
     <p class="question_card">${question}</p>
     <p class="answer_card">${answer}</p>`;
     document.getElementsByClassName("items")[0].appendChild(createItem);
-    contentArray.push(flashcard_info);
-    localStorage.setItem('questions', JSON.stringify([{ 'question': "asd", 'answer': 'asdasda' }]));
+    contentArray.push({ 'question': question, 'answer': answer });
+    localStorage.setItem('questions', JSON.stringify(contentArray));
     document.getElementById("question").value = "";
     document.getElementById("answer").value = "";
     question = "";
     answer = "";
-
 }
 
 
